@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function Navbar({ language, onToggleLanguage }) {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header className="relative">
       <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
-        <div className="text-white/90 font-semibold tracking-wide text-lg md:text-xl drop-shadow-sm">
+        <div className="text-white/95 font-semibold tracking-wide text-lg md:text-xl drop-shadow-sm">
           Hola Barcelona
         </div>
         <button

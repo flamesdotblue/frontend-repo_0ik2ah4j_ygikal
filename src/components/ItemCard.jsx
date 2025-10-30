@@ -8,7 +8,7 @@ export default function ItemCard({ title, description, region, image, language }
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="block w-full overflow-hidden rounded-2xl shadow-lg ring-1 ring-black/5 focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-400"
+        className="block w-full overflow-hidden rounded-2xl shadow-lg ring-1 ring-white/10 focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-400"
       >
         <div className="relative aspect-[4/3] w-full">
           <img
@@ -22,11 +22,11 @@ export default function ItemCard({ title, description, region, image, language }
               <h3 className="text-white text-lg md:text-xl font-semibold drop-shadow-sm">
                 {typeof title === 'string' ? title : (language === 'en' ? title.en : title.es)}
               </h3>
-              <p className="text-white/80 text-xs md:text-sm">
+              <p className="text-white/85 text-xs md:text-sm">
                 {language === 'en' ? 'Region' : 'Región'}: {typeof region === 'string' ? region : (language === 'en' ? region.en : region.es)}
               </p>
             </div>
-            <span className="ml-3 shrink-0 rounded-full bg-white/10 border border-white/30 px-3 py-1 text-xs text-white/90 group-hover:bg-white/20">
+            <span className="ml-3 shrink-0 rounded-full bg-white/10 backdrop-blur border border-white/30 px-3 py-1 text-xs text-white/90 group-hover:bg-white/20">
               {language === 'en' ? 'Learn more' : 'Ver más'}
             </span>
           </div>
@@ -35,8 +35,8 @@ export default function ItemCard({ title, description, region, image, language }
 
       {open && (
         <div className="absolute left-3 right-3 -bottom-2 translate-y-full z-10">
-          <div className="rounded-xl bg-white/95 backdrop-blur px-4 py-3 shadow-xl border border-black/10">
-            <p className="text-sm text-gray-800">
+          <div className="rounded-xl bg-black/70 backdrop-blur-md px-4 py-3 shadow-xl border border-white/15">
+            <p className="text-sm text-white/95">
               {typeof description === 'string' ? description : (language === 'en' ? description.en : description.es)}
             </p>
           </div>
